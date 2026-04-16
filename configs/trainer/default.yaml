@@ -1,0 +1,13 @@
+training:
+  epochs: 20
+  batch_size: 32
+  num_workers: 2
+  lr: 0.0003
+  weight_decay: 0.0001
+  lambda_color: 1.5
+  loss_name: weighted_ce
+  focal_gamma: 2.0
+  freeze_backbone: false
+  pretrained: true
+  early_stopping_patience: 5
+  log_every_n_steps: 20

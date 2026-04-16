@@ -1,0 +1,17 @@
+defaults:
+  - config
+  - data: stanford_cars
+  - model: classifier
+  - paths: default
+  - trainer: default
+  - callbacks: default
+  - logger: tensorboard
+  - extras: default
+  - hydra: default
+  - _self_
+
+task_name: train_classifier
+tags:
+  - stanford-cars
+  - classification
+  - lightning

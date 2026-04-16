@@ -1,0 +1,14 @@
+detector:
+  weights: weights/yolo.pt
+  class_id: 2
+  conf: 0.25
+
+classifier:
+  checkpoint: weights/classifier.ckpt
+  backbone: resnet50
+  image_size: 224
+
+runtime:
+  device: cuda
+  input_video: data/input.mp4
+  output_video: output/annotated.mp4

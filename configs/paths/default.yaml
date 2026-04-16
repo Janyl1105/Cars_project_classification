@@ -1,0 +1,4 @@
+paths:
+  data_dir: stanford_dataset
+  devkit_dir: devkit
+  output_dir: output

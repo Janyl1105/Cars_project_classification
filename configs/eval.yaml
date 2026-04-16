@@ -1,0 +1,12 @@
+defaults:
+  - config
+  - data: stanford_cars
+  - model: classifier
+  - paths: default
+  - trainer: default
+  - logger: tensorboard
+  - hydra: default
+  - _self_
+
+task_name: eval_classifier
+checkpoint_path: output/checkpoints/best.ckpt

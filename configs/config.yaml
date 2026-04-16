@@ -1,0 +1,9 @@
+project_name: real_time_car_detection
+seed: 42
+paths:
+  data_dir: /workspace/stanford_dataset
+  devkit_dir: /workspace/devkit
+  output_dir: /workspace/output
+
+data:
+  csv_path: /workspace/stanford_dataset/cars_bbox_cropped.csv
