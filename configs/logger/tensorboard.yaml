@@ -1,0 +1,4 @@
+logger:
+  backend: tensorboard
+  save_dir: ${paths.output_dir}/logs
+  name: cars_multihead

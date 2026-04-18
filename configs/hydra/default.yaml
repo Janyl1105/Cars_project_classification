@@ -1,0 +1,6 @@
+hydra:
+  run:
+    dir: ${paths.output_dir}/hydra_runs/${task_name}
+  sweep:
+    dir: ${paths.output_dir}/multirun/${task_name}
+    subdir: ${hydra.job.num}

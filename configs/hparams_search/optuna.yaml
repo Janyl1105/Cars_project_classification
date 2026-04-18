@@ -1,0 +1,4 @@
+hparams_search:
+  enabled: false
+  sampler: tpe
+  n_trials: 20

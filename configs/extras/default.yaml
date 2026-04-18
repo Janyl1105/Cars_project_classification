@@ -1,0 +1,3 @@
+extras:
+  print_config: true
+  ignore_warnings: false

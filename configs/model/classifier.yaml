@@ -1,0 +1,7 @@
+name: multihead_classifier
+backbone: resnet50
+image_size: 224
+num_type_classes: 11
+num_color_classes: 10
+head_hidden: 512
+head_dropout: 0.3

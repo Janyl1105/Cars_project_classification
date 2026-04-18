@@ -1,0 +1,3 @@
+experiment:
+  name: baseline_classifier
+  notes: Stanford Cars type and color baseline.

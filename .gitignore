@@ -1,0 +1,6 @@
+stanford_dataset/
+*.zip
+*.pt
+*.pth
+__pycache__/
+*.pyc
