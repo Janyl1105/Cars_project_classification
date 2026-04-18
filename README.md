@@ -38,6 +38,7 @@ This is the most practical path because the current notebook already contains a 
 4. Export the final inference stack to ONNX where appropriate.
 5. Add DVC, Docker, and experiment tracking around the project.
 
+<<<<<<< HEAD
 ## Project Structure
 
 ```
@@ -164,13 +165,36 @@ python scripts/prepare_stanford_cars.py
 > If you already have an extracted `/workspace/devkit` folder on the remote host, `devkit.zip` is not required.
 
 ### Alternate Kaggle download workflow
+=======
+## Suggested repo layout
+
+```text
+.github/
+configs/
+docs/
+notebooks/
+scripts/
+src/
+tests/
+Untitled_ssh.ipynb
+README.md
+requirements.txt
+```
+
+## Minimal run example
+
+Dataset download:
+>>>>>>> a5a5f798cee2227cc55414b5bebd66c603cd7071
 
 ```bash
 python scripts/download_stanford_cars.py
 ```
 
+<<<<<<< HEAD
 Note: this downloads and extracts the raw dataset on the remote machine.
 
+=======
+>>>>>>> a5a5f798cee2227cc55414b5bebd66c603cd7071
 Dataset preparation and bbox cropping:
 
 ```bash
@@ -180,7 +204,11 @@ python scripts/prepare_stanford_cars.py
 Current dataset layout used by the project:
 
 ```text
+<<<<<<< HEAD
 data/stanford_dataset/
+=======
+stanford_dataset/
+>>>>>>> a5a5f798cee2227cc55414b5bebd66c603cd7071
   cars_train/
   cars_test/
   cars_cropped/
@@ -201,7 +229,11 @@ python -m src.inference.video_inference \
 Classifier training entrypoint:
 
 ```bash
+<<<<<<< HEAD
 python -m src.train data.csv_path=data/stanford_dataset/cars_bbox_cropped.csv
+=======
+python -m src.train data.csv_path=stanford_dataset/cars_bbox_cropped.csv
+>>>>>>> a5a5f798cee2227cc55414b5bebd66c603cd7071
 ```
 
 Evaluation entrypoint:

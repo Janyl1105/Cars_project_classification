@@ -5,11 +5,10 @@ import pytorch_lightning as pl
 import torch
 from hydra.utils import get_original_cwd
 from omegaconf import DictConfig, OmegaConf
+<<<<<<< HEAD
+from pytorch_lightning import seed_everything
 from pytorch_lightning.callbacks import EarlyStopping, LearningRateMonitor, ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger
-
-from src.utils.env import get_device, seed_everything
-
 from src.data.datamodule import StanfordCarsDataModule
 from src.models.lightning_module import CarsLitModule
 
@@ -32,8 +31,7 @@ def main(cfg: DictConfig):
     outputs_dir.mkdir(parents=True, exist_ok=True)
     logs_dir.mkdir(parents=True, exist_ok=True)
 
-    device = get_device()
-    if device.type == "cuda":
+    if torch.cuda.is_available():
         torch.set_float32_matmul_precision("medium")
 
     datamodule = StanfordCarsDataModule(
