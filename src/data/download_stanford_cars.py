@@ -1,22 +1,23 @@
 from pathlib import Path
 
-# OPTIONAL: This script requires Kaggle API setup.
-# If you have a local cars_dataset.zip, use scripts/unpack_stanford_archives.py instead.
-# 
-# To use this script:
-# 1. Install kaggle: pip install kaggle
-# 2. Get API credentials from https://www.kaggle.com/settings/account
-# 3. Save kaggle.json to ~/.kaggle/kaggle.json
+# OPTIONAL: Требует Kaggle API.
+# Альтернатива без API: python -m src.data.unpack_stanford_archives
 #
-# Then uncomment the code below and run: python scripts/download_stanford_cars.py
+# Настройка:
+#   1. pip install kaggle
+#   2. Получи ключ на https://www.kaggle.com/settings/account
+#   3. Сохрани kaggle.json в ~/.kaggle/kaggle.json
+#
+# Затем раскомментируй код ниже и запусти:
+#   python -m src.data.download_stanford_cars
 
 """
-from src.data.download import download_kaggle_dataset, detect_dataset_layout, summarize_layout
+from src.data.download import detect_dataset_layout, download_kaggle_dataset, summarize_layout
+
 
 def main() -> None:
-    project_root = Path(__file__).resolve().parents[1]
     dataset = "ashc004/stanford-car-dataset"
-    raw_dir = project_root / "data" / "stanford_dataset_raw"
+    raw_dir = Path("/workspace/stanford_dataset_raw")
 
     print("Downloading Stanford Cars dataset from Kaggle...")
     extracted_root = download_kaggle_dataset(dataset, raw_dir, force=False)
@@ -43,4 +44,4 @@ if __name__ == "__main__":
 """
 
 if __name__ == "__main__":
-    print("Kaggle download is OPTIONAL. Use scripts/unpack_stanford_archives.py for local datasets.")
+    print("Kaggle download is OPTIONAL. Use 'python -m src.data.unpack_stanford_archives' for local zip archives.")

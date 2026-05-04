@@ -5,7 +5,6 @@ import pytorch_lightning as pl
 import torch
 from hydra.utils import get_original_cwd
 from omegaconf import DictConfig, OmegaConf
-<<<<<<< HEAD
 from pytorch_lightning import seed_everything
 from pytorch_lightning.callbacks import EarlyStopping, LearningRateMonitor, ModelCheckpoint
 from pytorch_lightning.loggers import TensorBoardLogger

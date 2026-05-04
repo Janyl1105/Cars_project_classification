@@ -1,16 +1,15 @@
 from pathlib import Path
 
 from src.data.preprocessing import prepare_cropped_dataset
-#он импортирует prepare_cropped_dataset из src.data.preprocessing
-# берёт dataset_root, cropped_dir, csv_path
-#он запускает весь процесс один раз
-#То есть:
-# для подготовки данных Обрезает изображения по аннотациям
-#Организует в папки по классам
-# ✅ После распаковки, перед обучением
+
+# Запуск: python -m src.data.prepare_stanford_cars
+# Обрезает изображения по bbox-аннотациям и генерирует cars_bbox_cropped.csv
+# ✅ Запускать после распаковки архивов, перед обучением
+
+
 def main() -> None:
-    project_root = Path(__file__).resolve().parents[1]
-    dataset_root = project_root / "data" / "stanford_dataset"
+    dataset_root = Path("/workspace/stanford_dataset")
+    # старый путь (относительный): project_root / "data" / "stanford_dataset"
     cropped_dir = dataset_root / "cars_cropped"
     csv_path = dataset_root / "cars_bbox_cropped.csv"
 
